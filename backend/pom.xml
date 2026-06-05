@@ -8,10 +8,10 @@
         <relativePath/>
     </parent>
     <groupId>com.elearnpro</groupId>
-    <artifactId>elearn-pro-backend</artifactId>
+    <artifactId>e-learn-backend</artifactId>
     <version>1.0.0</version>
-    <name>elearn-pro-backend</name>
-    <description>E-Learning platform backend with JWT, courses, books and recommendations</description>
+    <name>e-learn-backend</name>
+    <description>E-learn platform backend with JWT, courses, books and recommendations</description>
     <properties>
         <java.version>17</java.version>
     </properties>
