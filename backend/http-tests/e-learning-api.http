@@ -1,0 +1,72 @@
+@baseUrl = http://localhost:8080/api
+@token = paste_token_here
+
+### Login utilisateur
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "demo@elearnpro.com",
+  "password": "password"
+}
+
+### Register
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "New Student",
+  "email": "student@test.com",
+  "password": "password123",
+  "niveau": "Débutant",
+  "domaineInteret": "Data & IA"
+}
+
+### Liste cours
+GET {{baseUrl}}/courses
+Authorization: Bearer {{token}}
+
+### Filtrer cours
+GET {{baseUrl}}/courses?categorie=Data%20%26%20IA&niveau=Débutant
+Authorization: Bearer {{token}}
+
+### Recommandations
+GET {{baseUrl}}/recommendations
+Authorization: Bearer {{token}}
+
+### Inscription cours
+POST {{baseUrl}}/enrollments
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "courseId": 1
+}
+
+### Dashboard
+GET {{baseUrl}}/users/me/dashboard
+Authorization: Bearer {{token}}
+
+### Notifications
+GET {{baseUrl}}/notifications
+Authorization: Bearer {{token}}
+
+### Livres
+GET {{baseUrl}}/books
+Authorization: Bearer {{token}}
+
+### Ajouter livre
+POST {{baseUrl}}/books
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "titre": "Guide React avancé",
+  "auteur": "E-Learn Pro",
+  "domaine": "Développement Web",
+  "niveau": "Intermédiaire",
+  "description": "Livre gratuit pour apprendre React avec une architecture professionnelle.",
+  "lien": "https://example.com/react-guide",
+  "couverture": "",
+  "gratuit": true
+}
